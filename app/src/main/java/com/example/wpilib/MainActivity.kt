@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // use of the WPILib:
-        var conInfo = ConnectionInfo("localhost", "127.0.0.1", 8080, 0, 1)
+        val conInfo = ConnectionInfo("localhost", "127.0.0.1", 8080, 0, 1)
 
         setContent {
             WpilibTheme {
@@ -42,7 +42,7 @@ fun PrintConnectionInfo(conInfo: ConnectionInfo, modifier: Modifier = Modifier) 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    var conInfo = ConnectionInfo("localhost", "127.0.0.1", 8080, 0, 1)
+    val conInfo = ConnectionInfo("localhost", "127.0.0.1", 8080, 0, 1)
     WpilibTheme {
         PrintConnectionInfo(conInfo)
     }
